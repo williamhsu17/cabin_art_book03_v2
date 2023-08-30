@@ -1,0 +1,48 @@
+<style>
+    .display-none {
+        display: none;
+    }
+</style>
+<div class="left_image side-section" id="side_panel">
+    <a href="index.html"><img class="left_image" src="images/intro_side/left_01.gif" alt=""></a>
+    <a href="01_introductory.html"><img class="left_image" src="images/intro_side/left_02.gif" alt=""></a>
+
+    <a class="display-none sub-default" href="01_music.html"><img class="left_image" src="images/intro_side/left-music_01-left-music_02.gif" alt=""></a>
+    <a class="display-none sub-default" href="01_dance.html"><img class="left_image" src="images/intro_side/left-music_05-left-music_04.gif" alt=""></a>
+
+    <a class="display-none sub-01" href="01_music.html"><img class="left_image" src="images/intro_side/left-music_01-left-music_02.gif" alt=""></a>
+    <a class="display-none sub-01" href="#"><img class="left_image" src="images/intro_side/left-music_02-left-music_03.gif" alt=""></a>
+    <a class="display-none sub-01" href="#"><img class="left_image" src="images/intro_side/left-music_03-left-music_04.gif" alt=""></a>
+    <a class="display-none sub-01" href="#"><img class="left_image" src="images/intro_side/left-music_04.gif" alt=""></a>
+    <a class="display-none sub-01" href="01_dance.html"><img class="left_image" src="images/intro_side/left-music_05-left-music_04.gif" alt=""></a>
+
+    <a class="display-none sub-02" href="01_dance.html"><img class="left_image" src="images/intro_side/left_04.gif" alt=""></a>
+    <a class="display-none sub-02" href="#"><img class="display-none sub-02" src="images/intro_side/left_05.gif" alt=""></a>
+    <a class="display-none sub-02" href="#"><img class="display-none sub-02" src="images/intro_side/left_06.gif" alt=""></a>
+    
+    <a href="02_explore.html"><img class="left_image" src="images/intro_side/explore.gif" alt=""></a>
+    <!-- <a href="#"><img class="left_image" src="images/intro_side/left_06.gif" alt=""></a> -->
+    <!-- <img class="left_image" src="images/intro_side/left_07.gif" alt=""> -->
+    <!-- <img class="left_image" src="images/intro_side/left_08.gif" alt=""> -->
+    <script>
+        console.log(thisSide)
+        if (thisSide === 'side_01'){
+            let elements = document.querySelectorAll('.sub-01');
+            elements.forEach(function(element) {
+                element.classList.remove('display-none');
+            });
+        }
+        if (thisSide === 'side_02'){
+            let elements = document.querySelectorAll('.sub-02');
+            elements.forEach(function(element) {
+                element.classList.remove('display-none');
+            });
+        }
+        if (thisSide === 'side_default'){
+            let elements = document.querySelectorAll('.sub-default');
+            elements.forEach(function(element) {
+                element.classList.remove('display-none');
+            });
+        }
+    </script>
+</div>

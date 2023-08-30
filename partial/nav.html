@@ -1,0 +1,85 @@
+<style>
+    .nav_links {
+        margin-top: 50px;
+        display: flex;
+    }
+    .nav_links a {
+        display: block;
+        height: 32px;
+    }
+    .sub_links {
+        margin-top: 3px;
+        display: flex;
+    }
+    .sub_links a {
+        display: block;
+        height: 20px;
+        width: 68px;
+    }
+    .sub_links a:hover {
+        background-color: rgba(0,0,0,0.2);;
+    }
+</style>
+<div class="nav-section">
+    <div id="nav-background" style="width: 868px; height: 114px; display: flex; background-image: url('images/01_history/top07.jpg');">
+        <div style="width: 169; height: 114px; display: flex; flex-direction: column; background-color: #bfbfbf;">
+            <img id="nav-logo" src="images/01_history/top01.gif" alt="" style="width: 169px; height: 89px; line-height: 1;">
+            <a href="#" style="width: 96px; height: 25px; line-height: 1;"><img src="images/01_history/top02.gif" alt="" style="width: 96px; height: 25px;"></a>
+        </div>
+        <div id="nav-button-group"  style="width: 598px; height: 114px; background-image: url('images/01_history/top01_01.jpg');">
+            <div class="nav_links">
+                <a href="01-1.html" style="width: 68px;"></a>
+                <a href="02-1.html" style="width: 64px;"></a>
+                <a href="03-1.html" style="width: 65px;"></a>
+                <a href="04-1.html" style="width: 62px;"></a>
+                <a href="05-1.html" style="width: 60px;"></a>
+                <a href="06-1.html" style="width: 60px;"></a>
+            </div>
+            <div class="sub_links">
+                <div id="sub_link_spacer" style="height: 20px; width: 0px;"></div>
+                <a id="sub_link_01" href="01-1.html"></a>
+                <a id="sub_link_02" href="01-2.html"></a>
+                <a id="sub_link_03" href="01-3.html"></a>
+                <a id="sub_link_04" href="01-4.html"></a>
+                <a id="sub_link_05" href="01-5.html"></a>
+                <a id="sub_link_06" href="01-6.html"></a>
+                <a id="sub_link_07" href="01-7.html"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const navLogo = document.getElementById("nav-logo")
+    navLogo.src = navLogoImage;
+
+    const navBackground = document.getElementById("nav-background")
+    navBackground.style.backgroundImage = "url('" + navBackgroundImage + "')";
+    
+    const navButtonGroup = document.getElementById("nav-button-group")
+    navButtonGroup.style.backgroundImage = "url('" + navButtonGroupImage + "')";
+
+    const subLinkSpacer = document.getElementById("sub_link_spacer")
+    const subLink01 = document.getElementById("sub_link_01")
+    const subLink02 = document.getElementById("sub_link_02")
+    const subLink03 = document.getElementById("sub_link_03")
+    const subLink04 = document.getElementById("sub_link_04")
+    const subLink05 = document.getElementById("sub_link_05")
+    const subLink06 = document.getElementById("sub_link_06")
+    const subLink07 = document.getElementById("sub_link_07")
+
+    subLinkSpacer.style.width = subLinkSpacerWidth;
+    subLink01.href = subLink01src;
+    subLink01.style.width = subLink01Width;
+    subLink02.href = subLink02src;
+    subLink02.style.width = subLink02Width;
+    subLink03.href = subLink03src;
+    subLink03.style.width = subLink03Width;
+    subLink04.href = subLink04src;
+    subLink04.style.width = subLink04Width;
+    subLink05.href = subLink05src;
+    subLink05.style.width = subLink05Width;
+    subLink06.href = subLink06src;
+    subLink06.style.width = subLink06Width;
+    subLink07.href = subLink07src;
+    subLink07.style.width = subLink07Width;
+</script>

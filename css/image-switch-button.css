@@ -1,0 +1,82 @@
+.inline-image-switch {
+    width: 200px; 
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+.inline-image-switch .image-container img {
+    max-width: 100%;
+    width: auto;
+    max-height: 160px;
+}
+.button-container {
+    display: flex;
+}
+.button-container a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+    margin-right: 2px;
+}
+.image-switch-button {
+    display: block;
+    width: 12px;
+    height: 12px;
+    font-size: 0;
+}
+.isb_01 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_01a.gif");
+}
+.isb_01:hover {
+    background-image: url("../images/01_history/n_01b.gif");
+}
+.isb_02 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_02a.gif");
+}
+.isb_02:hover {
+    background-image: url("../images/01_history/n_02b.gif");
+}
+.isb_03 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_03a.gif");
+}
+.isb_03:hover {
+    background-image: url("../images/01_history/n_03b.gif");
+}
+.isb_04 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_04a.gif");
+}
+.isb_04:hover {
+    background-image: url("../images/01_history/n_04b.gif");
+}
+.isb_05 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_05a.gif");
+}
+.isb_05:hover {
+    background-image: url("../images/01_history/n_05b.gif");
+}
+.isb_06 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_06a.gif");
+}
+.isb_06:hover {
+    background-image: url("../images/01_history/n_06b.gif");
+}
+.isb_07 {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/01_history/n_07a.gif");
+}
+.isb_07:hover {
+    background-image: url("../images/01_history/n_07b.gif");
+}

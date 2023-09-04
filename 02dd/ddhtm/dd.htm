@@ -2,21 +2,113 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>當代采風</title>
+<title>當代風采</title>
+
+<script src="../../js/htmlinclude.js"></script>
+<include src="../../partial/header.html"></include>
+<style>
+  body {
+    background-image: url('../ddjpg/back1.jpg');
+  }
+  .main {
+    background-image: url('../../images/02dd/DD[12].jpg');
+    width: 800px;
+    height: 600px;
+    position: relative;
+  }
+  .display-none {
+    display: none;
+  }
+  .name_links {
+    padding-left: 240px; 
+    padding-top: 120px; 
+    display: flex;
+  }
+  .name_links .name_col .name {
+    display: flex;
+  }
+  .name_links .name_col .name .name_img{
+    width: 40px;
+    height: 30px;
+  }
+  .name_links .name_col .name .name_img img{
+    display: none;
+  }
+  .name_links .name_col .name .name_text{
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #0133ff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+</style>
 </head>
 <body>
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-codebase="http://active.macromedia.com/flash/cabs/swflash.cab#version=2,0,0,11"
-width="100%" height="100%" 
-pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
-  <param name="type" value="application/x-shockwave-flash">
-  <param name="Movie" value="../ddswf/dd.swf">
-  <param name="Loop" value="false">
-  <param name="Play" value="True">
-  <param name="Quality" value="high">
-<embed src="../ddswf/dd.swf" width="100%" height="100%"  Loop="False" Play="True"  Quality="high" type="application/x-shockwave-flash"
-pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
-</object>
-
+<div class="main">
+  <div class="name_links">
+    <div class="name_col">
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[0].jpg" alt=""></div>
+        <a href="dd-1.htm" class="name_text">張光賓</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[1].jpg" alt=""></div>
+        <a href="dd-2.htm" class="name_text">王靜芝</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[2].jpg" alt=""></div>
+        <a href="dd-3.htm" class="name_text">陳其銓</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[3].jpg" alt=""></div>
+        <a href="dd-4.htm" class="name_text">吳平</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[4].jpg" alt=""></div>
+        <a href="dd-5.htm" class="name_text">戴蘭村</a>
+      </div>
+    </div>
+    <div class="name_col">
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[5].jpg" alt=""></div>
+        <a href="dd-12.htm" class="name_text">汪中</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[6].jpg" alt=""></div>
+        <a href="dd-13.htm" class="name_text">王北岳</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[7].jpg" alt=""></div>
+        <a href="dd-14.htm" class="name_text">鄭善禧</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[8].jpg" alt=""></div>
+        <a href="dd-15.htm" class="name_text">于大成</a>
+      </div>
+      <div class="name">
+        <div class="name_img"><img class="" src="../../images/02dd/DD[9].jpg" alt=""></div>
+        <a href="dd-16.htm" class="name_text">傅申</a>
+      </div>
+    </div>
+  </div>
+  <include src="../../partial/nav.html"></include>
+</div>
 </body>
+<script>
+  const hoverDivs = document.querySelectorAll('.name_text');
+    const imagesToDisplay = document.querySelectorAll('.name_img img');
+
+    hoverDivs.forEach((hoverDiv, index) => {
+        hoverDiv.addEventListener('mouseover', function() {
+            imagesToDisplay[index].style.display = 'block';
+        });
+
+        hoverDiv.addEventListener('mouseout', function() {
+            imagesToDisplay[index].style.display = 'none';
+        });
+    });
+</script>
 </html>

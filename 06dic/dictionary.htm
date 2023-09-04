@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>翰墨書院</title>
+
+<script src="../js/htmlinclude.js"></script>
+<include src="../partial/header.html"></include>
+<style>
+  body {
+    background-image: url('../images/back1.jpg');
+  }
+  .main {
+    background-image: url('../images/06dic/DIC[2].jpg');
+    width: 800px;
+    height: 600px;
+    position: relative;
+  }
+  .display-none {
+    display: none;
+  }
+  .link_image_group {
+    position: relative;
+  }
+  .link_image_group a {
+    position: absolute;
+  }
+  #d1 {
+    background-image: url('../images/06dic/DIC[3].png');
+    width: 67px;
+    height: 47px;
+    top: 149px;
+    left: 207;
+  }
+  #d2 {
+    background-image: url('../images/06dic/DIC[4].png');
+    width: 67px;
+    height: 47px;
+    top: 149px;
+    left: 310;
+  }
+  #d3 {
+    background-image: url('../images/06dic/DIC[5].png');
+    width: 67px;
+    height: 47px;
+    top: 149px;
+    left: 415;
+  }
+  #d4 {
+    background-image: url('../images/06dic/DIC[8].png');
+    width: 66px;
+    height: 91px;
+    top: 236px;
+    left: 206;
+  }
+  #d5 {
+    background-image: url('../images/06dic/DIC[7].png');
+    width: 74px;
+    height: 91px;
+    top: 236px;
+    left: 312;
+  }
+  #d6 {
+    background-image: url('../images/06dic/DIC[6].png');
+    width: 74px;
+    height: 91px;
+    top: 236px;
+    left: 415;
+  }
+  #d7 {
+    background-image: url('../images/06dic/DIC[10].png');
+    width: 66px;
+    height: 46px;
+    top: 366px;
+    left: 207;
+  }
+  #d8 {
+    background-image: url('../images/06dic/DIC[9].png');
+    width: 74px;
+    height: 46px;
+    top: 366px;
+    left: 312;
+  }
+  #d9 {
+    background-image: url('../images/06dic/DIC[11].png');
+    width: 74px;
+    height: 45px;
+    top: 366px;
+    left: 415;
+  }
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="link_image_group">
+    <a href="dichtm/dic1.htm" id="d1"></a>
+    <a href="dichtm/dic2.htm" id="d2"></a>
+    <a href="dichtm/dic3.htm" id="d3"></a>
+    <a href="dichtm/dic4.htm" id="d4"></a>
+    <a href="dichtm/dic5.htm" id="d5"></a>
+    <a href="dichtm/dic6.htm" id="d6"></a>
+    <a href="dichtm/dic7.htm" id="d7"></a>
+    <a href="dichtm/dic8.htm" id="d8"></a>
+    <a href="dichtm/dic9.htm" id="d9"></a>
+  </div>
+  <style>
+    .nav_section {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+    }
+    .nav_links {
+        margin-top: 5px;
+        margin-left: 50px;
+        display: flex;
+    }
+    .nav_links a {
+        display: block;
+        width: 100px;
+        height: 32px;
+        color: black;
+    }
+    .sub_links {
+        margin-top: 3px;
+        display: flex;
+    }
+    .sub_links a {
+        display: block;
+        height: 20px;
+        width: 68px;
+    }
+    .sub_links a:hover {
+        background-color: rgba(0,0,0,0.2);;
+    }
+    #to_index {
+        position: absolute;
+        background-image: url('../../images/bk_icon.gif');
+        width: 44px;
+        height: 69px;
+        bottom: 50px;
+        right: 100px;
+        cursor: pointer;
+        font-size: 0;
+    }
+    #to_index:hover {
+        background-image: url('../../images/bk_icon_hover.gif');
+        cursor: pointer;
+    }
+  </style>
+  <div class="nav_section">
+      <div class="first_row nav_links" style="display: flex;">
+          <a href="../01wh/whhtm/wh.htm">華夏墨寶</a>
+          <a href="../02dd/ddhtm/dd.htm">當代風采</a>
+          <a href="../03item/itemhtm/item.htm">文房聚英</a>
+          <a href="../04net/nethtm/net.htm">網網相連</a>
+      </div>
+      <div class="second_row nav_links" style="display: flex;">
+          <a href="../05school/schoolhtm/school.htm">翰墨書院</a>
+          <a href="../06dic/dictionary.htm">書法專用詞</a>
+          <a href="01-1.html">書法故事</a>
+      </div>
+  </div>
+  <a href="../index.html" id="to_index"></a>
+</div>
+</body>
+<script>
+  const hoverDivs = document.querySelectorAll('.name_text');
+    const imagesToDisplay = document.querySelectorAll('.name_img img');
+
+    hoverDivs.forEach((hoverDiv, index) => {
+        hoverDiv.addEventListener('mouseover', function() {
+            imagesToDisplay[index].style.display = 'block';
+        });
+
+        hoverDiv.addEventListener('mouseout', function() {
+            imagesToDisplay[index].style.display = 'none';
+        });
+    });
+</script>
+</html>

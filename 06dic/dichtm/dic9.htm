@@ -67,7 +67,11 @@ function MM_swapImage() { //v2.0
   </tr>
   <tr>
     <td width="8" height="50" valign="top"></td>
-    <td width="40" height="50" valign="top"><A HREF="dicw9.htm" target="wave"><img src="../dicgif/horn.gif" width="40" height="40" border=0 alt="旁白"></a></td>
+    <td width="40" height="50" valign="top">
+    <audio data-audio-id="1" class="myAudio">
+    <source src="../dicsound/W9.wav" type="audio/mpeg">
+     Your browser does not support the audio element.</audio>
+     <img data-audio-id="1" class="sound_image" src="../dicgif/horn.gif" alt="" style="cursor: pointer; width: 40px;"></td>
     <td width="314" height="50" valign="top"></td>
     <td width="38" height="50" valign="top"></td>
     <td width="10" height="50" valign="top"></td>
@@ -107,14 +111,14 @@ function MM_swapImage() { //v2.0
     <td width="10" height="2" valign="top"></td>
     <td width="7" height="2" valign="top"></td>
     <td width="9" height="2" valign="top"></td>
-    <td width="48" height="69" rowspan="2" valign="top"><a href="frame1.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁"></a></td>
+    <td width="48" height="69" rowspan="2" valign="top"><a href="frame1.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁">下一頁</a></td>
   </tr>
   <tr>
     <td width="135" height="67" valign="top"></td>
     <td width="8" height="67" valign="top"></td>
     <td width="40" height="67" valign="top"></td>
     <td width="314" height="67" valign="top"></td>
-    <td width="48" height="67" colspan="2" valign="top"><a href="frame8.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁"></a></td>
+    <td width="48" height="67" colspan="2" valign="top"><a href="frame8.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁">上一頁</a></td>
     <td width="7" height="67" valign="top"></td>
     <td width="9" height="67" valign="top"></td>
   </tr>
@@ -132,4 +136,32 @@ function MM_swapImage() { //v2.0
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>

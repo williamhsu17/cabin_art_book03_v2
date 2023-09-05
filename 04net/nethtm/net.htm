@@ -1,44 +1,52 @@
 <html>
+
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>網網相連</title>
-<script language="JavaScript">
-<!--
-function MM_swapImgRestore() { //v2.0
-  if (document.MM_swapImgData != null)
-    for (var i=0; i<(document.MM_swapImgData.length-1); i+=2)
-      document.MM_swapImgData[i].src = document.MM_swapImgData[i+1];
-}
 
-function MM_preloadImages() { //v2.0
-  if (document.images) {
-    var imgFiles = MM_preloadImages.arguments;
-    if (document.preloadArray==null) document.preloadArray = new Array();
-    var i = document.preloadArray.length;
-    with (document) for (var j=0; j<imgFiles.length; j++) if (imgFiles[j].charAt(0)!="#"){
-      preloadArray[i] = new Image;
-      preloadArray[i++].src = imgFiles[j];
-  } }
-}
-
-function MM_swapImage() { //v2.0
-  var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
-  for (i=0; i < (MM_swapImage.arguments.length-2); i+=3) {
-    objStr = MM_swapImage.arguments[(navigator.appName == 'Netscape')?i:i+1];
-    if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
-        (objStr.indexOf('document.all[')   ==0 && document.all   ==null))
-      objStr = 'document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
-    obj = eval(objStr);
-    if (obj != null) {
-      swapArray[j++] = obj;
-      swapArray[j++] = (oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
-      obj.src = MM_swapImage.arguments[i+2];
-  } }
-  document.MM_swapImgData = swapArray; //used for restore
-}
-//-->
-</script>
+<script src="../../js/htmlinclude.js"></script>
+<include src="../../partial/header.html"></include>
+<style>
+  body {
+    background-image: url('../../images/back1.jpg');
+  }
+  .main {
+    background-image: url('../netjpg/netbg.jpg');
+    width: 800px;
+    height: 600px;
+    position: relative;
+  }
+  .display-none {
+    display: none;
+  }
+  .link_image_group {
+    position: relative;
+  }
+  .link_image_group a {
+    position: absolute;
+  }
+  #font {
+    background-image: url('../../images/05school/SCHOOL[4].png');
+    width: 175px;
+    height: 156px;
+    top: 300px;
+    left: 480px;
+  }
+  #font:hover {background-image: url('../../images/05school/SCHOOL[3].png');}
+  #basic {
+    background-image: url('../../images/05school/SCHOOL[5].png');
+    width: 172px;
+    height: 146px;
+    top: 360px;
+    left: 240px;
+  }
+  #basic:hover {background-image: url('../../images/05school/SCHOOL[2].png');}
+</style>
 </head>
-<body background="../netjpg/netbg.jpg"  bgsound src="../sound/net.wav" loop=infinite onLoad="MM_preloadImages('../netjpg/bk-icon2.gif','#892481462040')" >
+<body>
+<div class="main">
+
+
 <table cellspacing="0" cellpadding="0" border="0">
   <tr> 
     <td width="47" height="4" valign="top"></td>
@@ -255,20 +263,8 @@ function MM_swapImage() { //v2.0
   </tr>
   <tr> 
     <td width="47" height="25" valign="top"></td>
-    <td height="100" colspan="5" rowspan="2" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-  codebase="http://active.macromedia.com/flash/cabs/swflash.cab#version=2,0,0,11"
-      width="400" height="100" 
-      pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" >
-        <param name="type" value="application/x-shockwave-flash">
-        <param name="Movie" value="../netswf/netbottom.swf">
-        <param name="Loop" value="false">
-        <param name="Play" value="True">
-        <param name="Quality" value="high">
-        <embed src="../netswf/netbottom.swf" height="100" width="400"  Loop="False" Play="True"
-   Quality="high" type="application/x-shockwave-flash"
-   pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" hspace="40">
-        </embed> 
-      </object></td>
+    <td height="100" colspan="5" rowspan="2" valign="top">
+    <p></p></td>
     <td width="166" height="25" valign="top"></td>
     <td width="7" height="25" valign="top"></td>
     <td width="55" height="25" valign="top"></td>
@@ -279,9 +275,26 @@ function MM_swapImage() { //v2.0
     <td width="166" height="75" valign="top"></td>
     <td width="7" height="75" valign="top"></td>
     <td width="55" height="75" valign="top"></td>
-    <td width="64" height="75" valign="top"><a href="../mainmenu.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.bk_main','document.bk_main','../netjpg/bk-icon2.gif','#892481462040');"><img name="bk_main" border="0" src="../netjpg/bk-icon.gif" width="44" height="69"></a></td>
+    <td width="64" height="75" valign="top"></td>
   </tr>
  
 </table>
+
+  <include src="../../partial/nav.html"></include>
+</div>
 </body>
+<script>
+  const hoverDivs = document.querySelectorAll('.name_text');
+    const imagesToDisplay = document.querySelectorAll('.name_img img');
+
+    hoverDivs.forEach((hoverDiv, index) => {
+        hoverDiv.addEventListener('mouseover', function() {
+            imagesToDisplay[index].style.display = 'block';
+        });
+
+        hoverDiv.addEventListener('mouseout', function() {
+            imagesToDisplay[index].style.display = 'none';
+        });
+    });
+</script>
 </html>

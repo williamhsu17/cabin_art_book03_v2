@@ -67,7 +67,10 @@ function MM_swapImage() { //v2.0
   </tr>
   <tr>
     <td width="8" height="60" valign="top"></td>
-    <td width="40" height="60" valign="top"><A HREF="dicw4.htm" target="wave"><img src="../dicgif/horn.gif" width="40" height="40" border=0 alt="旁白"></a></td>
+    <td width="40" height="60" valign="top"><audio data-audio-id="1" class="myAudio">
+    <source src="../dicsound/W4.wav" type="audio/mpeg">
+     Your browser does not support the audio element.</audio>
+     <img data-audio-id="1" class="sound_image" src="../dicgif/horn.gif" alt="" style="cursor: pointer; width: 40px;"></td>
     <td width="301" height="60" valign="top"></td>
     <td width="6" height="60" valign="top"></td>
     <td width="48" height="60" valign="top"></td>
@@ -79,9 +82,8 @@ function MM_swapImage() { //v2.0
   <tr>
     <td width="8" height="349" valign="top"></td>
     <td width="341" height="349" colspan="2" valign="top"><img src="../dicjpg/pic4.jpg" width="200" height="157" align="right" vspace="10" hspace="10"> 
-      <p style="line-height: 24px; text-indent:2em"><font size=3>筆斷意連是形容書寫時雖然不一定筆筆相連屬，但仍須做到筆勢連續不斷，方法在於每一筆的結束都準備著下一筆的開始，熟能生巧之後，則不論斷或連都能達到一氣呵成的美感，在行草書的表現中最為顯要，而楷書的點畫之間亦不能忽略這種技法的重要。〈書家範寫 
-        ﹕<font color="#093465">杜忠誥</font>〉</font> </p>
-  <a href="../mpg/8.mpg" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image16','document.Image16','../dicgif/vcr2.gif','#925112871990');"><img name="Image16" border="0" src="../dicgif/vcr1.gif" width="63" height="40" align="right"></a></td>
+      <p style="line-height: 24px; text-indent:2em"><font size=3>筆斷意連是形容書寫時雖然不一定筆筆相連屬，但仍須做到筆勢連續不斷，方法在於每一筆的結束都準備著下一筆的開始，熟能生巧之後，則不論斷或連都能達到一氣呵成的美感，在行草書的表現中最為顯要，而楷書的點畫之間亦不能忽略這種技法的重要。〈書家範寫：<font color="#093465">杜忠誥</font>〉</font> </p>
+  <a href="https://youtu.be/xPQMVAJMuBQ" target="_blank" onMouseOver="MM_swapImage('document.Image16','document.Image16','../dicgif/vcr2.gif','#925112871990');" onMouseOut="MM_swapImgRestore()"><img name="Image16" border="0" src="../dicgif/vcr1.gif" width="63" height="40" align="right"></a></td>
     <td width="6" height="349" valign="top"></td>
     <td width="48" height="349" valign="top"></td>
     <td width="10" height="349" valign="top"></td>
@@ -107,10 +109,10 @@ function MM_swapImage() { //v2.0
     <td width="40" height="65" valign="top"></td>
     <td width="301" height="65" valign="top"></td>
     <td width="6" height="65" valign="top"></td>
-    <td width="48" height="65" valign="top"><a href="frame3.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁"></a></td>
+    <td width="48" height="65" valign="top"><a href="frame3.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁">上一頁</a></td>
     <td width="10" height="65" valign="top"></td>
     <td width="10" height="65" valign="top"></td>
-    <td width="48" height="65" valign="top"><a href="frame5.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁"></a></td>
+    <td width="48" height="65" valign="top"><a href="frame5.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁">下一頁</a></td>
   </tr>
   <tr>
     <td width="134" height="1" valign="top"><img width="134" height="1" src="transparent.gif"></td>
@@ -126,4 +128,32 @@ function MM_swapImage() { //v2.0
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>

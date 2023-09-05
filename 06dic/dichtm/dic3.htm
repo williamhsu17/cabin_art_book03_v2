@@ -70,7 +70,11 @@ function MM_swapImage() { //v2.0
   <tr>
     <td width="14" height="57" valign="top"></td>
     <td width="8" height="57" valign="top"></td>
-    <td width="40" height="57" valign="top"><A HREF="dicw3.htm" target="wave"><img src="../dicgif/horn.gif" width="40" height="40" border=0 alt="旁白"></a></td>
+    <td width="40" height="57" valign="top">
+        <audio data-audio-id="1" class="myAudio">
+    <source src="../dicsound/W3.wav" type="audio/mpeg">
+     Your browser does not support the audio element.</audio>
+     <img data-audio-id="1" class="sound_image" src="../dicgif/horn.gif" alt="" style="cursor: pointer; width: 40px;"></td>
     <td width="297" height="57" valign="top"></td>
     <td width="9" height="57" valign="top"></td>
     <td width="39" height="57" valign="top"></td>
@@ -82,7 +86,7 @@ function MM_swapImage() { //v2.0
   <tr>
     <td width="14" height="326" valign="top"></td>
     <td width="354" height="326" colspan="4" valign="top"><img src="../dicjpg/pic3.jpg" width="138" height="200" align="left" vspace="10" hspace="10"> 
-      <p style="line-height:30px; text-indent:2em"><font size=3>行氣指書法作品中字與字之間的映帶關係以至於行與行的呼應關係，如相連的筆畫可以感受到流暢貫串的意味，而不相連的筆畫則透過筆斷意連的方式，達到變化多端又一氣呵成的效果。清代書家宋曹＜書法約言＞一書曾言 ﹕「勿往復收，乍斷復連，承上生下，戀子顧母。」貼切地形容了書法作品中的行氣關係。 </font></p></td>
+      <p style="line-height:30px; text-indent:2em"><font size=3>行氣指書法作品中字與字之間的映帶關係以至於行與行的呼應關係，如相連的筆畫可以感受到流暢貫串的意味，而不相連的筆畫則透過筆斷意連的方式，達到變化多端又一氣呵成的效果。清代書家宋曹＜書法約言＞一書曾言 ：「勿往復收，乍斷復連，承上生下，戀子顧母。」貼切地形容了書法作品中的行氣關係。 </font></p></td>
     <td width="39" height="326" valign="top"></td>
     <td width="5" height="326" valign="top"></td>
     <td width="54" height="326" valign="top"></td>
@@ -112,7 +116,7 @@ function MM_swapImage() { //v2.0
     <td width="39" height="1" valign="top"></td>
     <td width="5" height="1" valign="top"></td>
     <td width="7" height="1" valign="top"></td>
-    <td width="48" height="68" rowspan="2" valign="top"><a href="frame4.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁"></a></td>
+    <td width="48" height="68" rowspan="2" valign="top"><a href="frame4.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image5','document.Image5','../dicgif/babyright.gif','#924745062920');" target="_top"><img name="Image5" border="0" src="../dicgif/babyright1.gif" width="48" height="64" alt="下一頁">下一頁</a></td>
   </tr>
   <tr>
     <td width="134" height="67" valign="top"></td>
@@ -120,7 +124,7 @@ function MM_swapImage() { //v2.0
     <td width="8" height="67" valign="top"></td>
     <td width="40" height="67" valign="top"></td>
     <td width="297" height="67" valign="top"></td>
-    <td width="48" height="67" colspan="2" valign="top"><a href="frame2.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁"></a></td>
+    <td width="48" height="67" colspan="2" valign="top"><a href="frame2.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('document.Image4','document.Image4','../dicgif/babyleft.gif','#924744979160');" target="_top"><img name="Image4" border="0" src="../dicgif/babyleft1.gif" width="48" height="64" alt="上一頁">上一頁</a></td>
     <td width="5" height="67" valign="top"></td>
     <td width="7" height="67" valign="top"></td>
   </tr>
@@ -139,4 +143,32 @@ function MM_swapImage() { //v2.0
   </tr>
 </table>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.sound_image');
+      
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const audioId = this.getAttribute('data-audio-id');
+              const audioElement = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+
+              // Pause any other playing audios
+              const allAudios = document.querySelectorAll('.myAudio');
+              allAudios.forEach(audio => {
+                  if (audio !== audioElement && !audio.paused) {
+                      audio.pause();
+                  }
+              });
+
+              // Toggle play/pause for the clicked audio
+              if (audioElement.paused) {
+                  audioElement.play();
+              } else {
+                  audioElement.pause();
+              }
+          });
+      });
+  });
+</script>
+
 </html>

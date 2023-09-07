@@ -16,6 +16,15 @@
     height: 600px;
     position: relative;
   }
+  .content {
+    display: none;
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    width: 800px;
+    height: 600px;
+    transform: translateY(-50%);
+  }
   .display-none {
     display: none;
   }
@@ -92,88 +101,102 @@
 </head>
 <body>
 <div class="main_section">
-  <div class="link_image_group">
-    <a href="dichtm/dic1.htm" id="d1"></a>
-    <a href="dichtm/dic2.htm" id="d2"></a>
-    <a href="dichtm/dic3.htm" id="d3"></a>
-    <a href="dichtm/dic4.htm" id="d4"></a>
-    <a href="dichtm/dic5.htm" id="d5"></a>
-    <a href="dichtm/dic6.htm" id="d6"></a>
-    <a href="dichtm/dic7.htm" id="d7"></a>
-    <a href="dichtm/dic8.htm" id="d8"></a>
-    <a href="dichtm/dic9.htm" id="d9"></a>
+  <video id="backgroundVideo" autoplay muted>
+    <source src="../images/movie/OPEN.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content" id="contentDiv">
+    <div class="link_image_group">
+      <a href="dichtm/dic1.htm" id="d1"></a>
+      <a href="dichtm/dic2.htm" id="d2"></a>
+      <a href="dichtm/dic3.htm" id="d3"></a>
+      <a href="dichtm/dic4.htm" id="d4"></a>
+      <a href="dichtm/dic5.htm" id="d5"></a>
+      <a href="dichtm/dic6.htm" id="d6"></a>
+      <a href="dichtm/dic7.htm" id="d7"></a>
+      <a href="dichtm/dic8.htm" id="d8"></a>
+      <a href="dichtm/dic9.htm" id="d9"></a>
+    </div>
+    <style>
+      .nav_section {
+          width: 100%;
+          position: absolute;
+          bottom: 0px;
+      }
+      .nav_links {
+          margin-top: 5px;
+          margin-left: 50px;
+          display: flex;
+      }
+      .nav_links a {
+          display: block;
+          width: 100px;
+          height: 32px;
+          color: black;
+      }
+      .sub_links {
+          margin-top: 3px;
+          display: flex;
+      }
+      .sub_links a {
+          display: block;
+          height: 20px;
+          width: 68px;
+      }
+      .sub_links a:hover {
+          background-color: rgba(0,0,0,0.2);;
+      }
+      #to_index {
+          position: absolute;
+          background-image: url('../images/bk_icon.gif');
+          width: 44px;
+          height: 69px;
+          bottom: 50px;
+          right: 100px;
+          cursor: pointer;
+          font-size: 0;
+      }
+      #to_index:hover {
+          background-image: url('../images/bk_icon_hover.gif');
+          cursor: pointer;
+      }
+    </style>
+    <div class="nav_section">
+        <div class="first_row nav_links" style="display: flex;">
+            <a href="../01wh/whhtm/wh.htm">華夏墨寶</a>
+            <a href="../02dd/ddhtm/dd.htm">當代風采</a>
+            <a href="../03item/itemhtm/item.htm">文房聚英</a>
+            <a href="../04net/nethtm/net.htm">網網相連</a>
+        </div>
+        <div class="second_row nav_links" style="display: flex;">
+            <a href="../05school/schoolhtm/school.htm">翰墨書院</a>
+            <a href="../06dic/dictionary.htm">書法專用辭</a>
+            <a href="../07story/storyhtm/story.htm">書法故事</a>
+        </div>
+    </div>
+    <a href="../index.html" id="to_index"></a>
   </div>
-  <style>
-    .nav_section {
-        width: 100%;
-        position: absolute;
-        bottom: 0px;
-    }
-    .nav_links {
-        margin-top: 5px;
-        margin-left: 50px;
-        display: flex;
-    }
-    .nav_links a {
-        display: block;
-        width: 100px;
-        height: 32px;
-        color: black;
-    }
-    .sub_links {
-        margin-top: 3px;
-        display: flex;
-    }
-    .sub_links a {
-        display: block;
-        height: 20px;
-        width: 68px;
-    }
-    .sub_links a:hover {
-        background-color: rgba(0,0,0,0.2);;
-    }
-    #to_index {
-        position: absolute;
-        background-image: url('../images/bk_icon.gif');
-        width: 44px;
-        height: 69px;
-        bottom: 50px;
-        right: 100px;
-        cursor: pointer;
-        font-size: 0;
-    }
-    #to_index:hover {
-        background-image: url('../images/bk_icon_hover.gif');
-        cursor: pointer;
-    }
-  </style>
-<div class="nav_section">
-    <div class="first_row nav_links" style="display: flex;">
-        <a href="../01wh/whhtm/wh.htm">華夏墨寶</a>
-        <a href="../02dd/ddhtm/dd.htm">當代風采</a>
-        <a href="../03item/itemhtm/item.htm">文房聚英</a>
-        <a href="../04net/nethtm/net.htm">網網相連</a>
-    </div>
-    <div class="second_row nav_links" style="display: flex;">
-        <a href="../05school/schoolhtm/school.htm">翰墨書院</a>
-        <a href="../06dic/dictionary.htm">書法專用辭</a>
-        <a href="../07story/storyhtm/story.htm">書法故事</a>
-    </div>
 </div>
-<a href="../index.html" id="to_index"></a>
 </body>
 <script>
+  const videoElement = document.getElementById('backgroundVideo');
+  const contentDiv = document.getElementById('contentDiv');
+
+  videoElement.addEventListener('ended', function() {
+      contentDiv.style.display = 'block';
+      videoElement.style.display = 'none';
+  });
   const hoverDivs = document.querySelectorAll('.name_text');
-    const imagesToDisplay = document.querySelectorAll('.name_img img');
+  const imagesToDisplay = document.querySelectorAll('.name_img img');
 
-    hoverDivs.forEach((hoverDiv, index) => {
-        hoverDiv.addEventListener('mouseover', function() {
-            imagesToDisplay[index].style.display = 'block';
-        });
+  hoverDivs.forEach((hoverDiv, index) => {
+      hoverDiv.addEventListener('mouseover', function() {
+          imagesToDisplay[index].style.display = 'block';
+      });
 
-        hoverDiv.addEventListener('mouseout', function() {
-            imagesToDisplay[index].style.display = 'none';
-        });
-    });
+      hoverDiv.addEventListener('mouseout', function() {
+          imagesToDisplay[index].style.display = 'none';
+      });
+  });
 </script>
 </html>

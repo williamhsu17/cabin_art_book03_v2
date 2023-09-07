@@ -16,6 +16,15 @@
     height: 600px;
     position: relative;
   }
+  .content {
+    display: none;
+    position: relative;
+    z-index: 1;
+    top: 50%;
+    width: 800px;
+    height: 600px;
+    transform: translateY(-50%);
+  }
   .display-none {
     display: none;
   }
@@ -45,25 +54,38 @@
 </head>
 <body>
 <div class="main">
-  <div class="link_image_group">
-    <a href="font.htm" id="font"></a>
-    <a href="basic.htm" id="basic"></a>
+  <video id="backgroundVideo" autoplay muted>
+    <source src="../../images/movie/SCHOOLOPEN.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content" id="contentDiv">
+    <div class="link_image_group">
+      <a href="font.htm" id="font"></a>
+      <a href="basic.htm" id="basic"></a>
+    </div>
+    <include src="../../partial/nav.html"></include>
   </div>
-  <include src="../../partial/nav.html"></include>
 </div>
 </body>
 <script>
+  const videoElement = document.getElementById('backgroundVideo');
+  const contentDiv = document.getElementById('contentDiv');
+
+  videoElement.addEventListener('ended', function() {
+      contentDiv.style.display = 'block';
+      videoElement.style.display = 'none';
+  });
   const hoverDivs = document.querySelectorAll('.name_text');
-    const imagesToDisplay = document.querySelectorAll('.name_img img');
+  const imagesToDisplay = document.querySelectorAll('.name_img img');
 
-    hoverDivs.forEach((hoverDiv, index) => {
-        hoverDiv.addEventListener('mouseover', function() {
-            imagesToDisplay[index].style.display = 'block';
-        });
+  hoverDivs.forEach((hoverDiv, index) => {
+      hoverDiv.addEventListener('mouseover', function() {
+          imagesToDisplay[index].style.display = 'block';
+      });
 
-        hoverDiv.addEventListener('mouseout', function() {
-            imagesToDisplay[index].style.display = 'none';
-        });
-    });
+      hoverDiv.addEventListener('mouseout', function() {
+          imagesToDisplay[index].style.display = 'none';
+      });
+  });
 </script>
 </html>

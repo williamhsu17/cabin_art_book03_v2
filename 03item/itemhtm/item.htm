@@ -16,7 +16,7 @@
     height: 600px;
     position: relative;
   }
-  .content {
+ /* .content {
     display: none;
     position: relative;
     z-index: 1;
@@ -24,7 +24,7 @@
     width: 800px;
     height: 600px;
     transform: translateY(-50%);
-  }
+  }*/
   .display-none {
     display: none;
   }
@@ -73,10 +73,10 @@
 </head>
 <body>
 <div class="main">
-  <video id="backgroundVideo" autoplay muted>
+ <!-- <video id="backgroundVideo" autoplay muted>
     <source src="../../images/movie/ITEMOPEN.mp4" type="video/mp4">
     Your browser does not support the video tag.
-  </video>
+  </video>-->
   <div class="content" id="contentDiv">
     <div class="link_image_group">
       <a href="other.htm" id="other"></a>
@@ -90,13 +90,13 @@
 </div>
 </body>
 <script>
-  const videoElement = document.getElementById('backgroundVideo');
+ /* const videoElement = document.getElementById('backgroundVideo');
   const contentDiv = document.getElementById('contentDiv');
 
   videoElement.addEventListener('ended', function() {
       contentDiv.style.display = 'block';
       videoElement.style.display = 'none';
-  });
+  });*/
   const hoverDivs = document.querySelectorAll('.name_text');
   const imagesToDisplay = document.querySelectorAll('.name_img img');
 

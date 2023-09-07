@@ -1,18 +1,60 @@
 <html>
 <head><title>pen-right html</title>
+  <style>
+    body {
+      overflow: hidden;
+    }
+    .main {
+      width: 100%;
+      height: 100%;
+      background-image: url('../itempen/multi-b.JPG');
+      background-repeat: repeat;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .link_container a {
+      text-decoration: none;
+      font-size: 0;
+    }
+    .item_btn {
+      display: block;
+      width: 54px;
+      height: 49px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    #btn_pen {background-image: url('../../images/03item/menu/icon_pen.png');}
+    #btn_ink {background-image: url('../../images/03item/menu/icon_ink.png');}
+    #btn_paper {background-image: url('../../images/03item/menu/icon_paper.png');}
+    #btn_dish {background-image: url('../../images/03item/menu/icon_dish.png');}
+    #btn_other {background-image: url('../../images/03item/menu/icon_other.png');}
+    #btn_gohome {background-image: url('../../images/03item/menu/up-icon2.gif');}
+
+    #btn_pen:hover {background-image: url('../../images/03item/menu/icon_pen_hover.png');}
+    #btn_ink:hover {background-image: url('../../images/03item/menu/icon_ink_hover.png');}
+    #btn_paper:hover {background-image: url('../../images/03item/menu/icon_paper_hover.png');}
+    #btn_dish:hover {background-image: url('../../images/03item/menu/icon_dish_hover.png');}
+    #btn_other:hover {background-image: url('../../images/03item/menu/icon_other_hover.png');}
+    #btn_gohome:hover {background-image: url('../../images/03item/menu/up-icon.gif');}
+
+    #btn_pen.active {background-image: url('../../images/03item/menu/icon_pen_hover.png');}
+    #btn_ink.active {background-image: url('../../images/03item/menu/icon_ink_hover.png');}
+    #btn_paper.active {background-image: url('../../images/03item/menu/icon_paper_hover.png');}
+    #btn_dish.active {background-image: url('../../images/03item/menu/icon_dish_hover.png');}
+    #btn_other.active {background-image: url('../../images/03item/menu/icon_other_hover.png');}
+    #btn_gohome.active {background-image: url('../../images/03item/menu/up-icon.gif');}
+  </style>
+</head>
 <body>
-<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-          codebase="http://active.macromedia.com/flash/cabs/swflash.cab#version=2,0,0,11"
-         width="100" height="600" 
-         pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
-        <param name="type" value="application/x-shockwave-flash">
-        <param name="Movie" value="../itemswf/icon-p.swf">
-        <param name="Loop" value="false">
-        <param name="Play" value="True">
-        <param name="Quality" value="high">
-        <embed src="../itemswf/icon-p.swf" height="600" width="100"  Loop="False" Play="True"
-       Quality="high" type="application/x-shockwave-flash"
-       pluginspage="/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed>
-  </object>
+<div class="main">
+  <div class="link_container">
+    <a href="pen.htm" class="item_btn active" id="btn_pen" target="_top" style="width: 45px; height: 45px;"></a>
+    <a href="ink.htm" class="item_btn" id="btn_ink" target="_top"></a>
+    <a href="paper.htm" class="item_btn" id="btn_paper" target="_top"></a>
+    <a href="dish.htm" class="item_btn" id="btn_dish" target="_top"></a>
+    <a href="other.htm" class="item_btn" id="btn_other" target="_top" style="height: 74px;"></a>
+    <a href="item.htm" class="item_btn" id="btn_gohome" target="_top" style="height: 100px;"></a>
+  </div>
+</div>
 </body>
 </html>

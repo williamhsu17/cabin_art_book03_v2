@@ -16,15 +16,15 @@
     height: 600px;
     position: relative;
   }
-/*  .content {
-    display: none;
+  .content {
     position: relative;
     z-index: 1;
     top: 50%;
     width: 800px;
     height: 600px;
-    transform: translateY(-50%);
-  }*/
+    /*display: none;*/
+transform: translateY(-50%);
+  }
   .display-none {
     display: none;
   }
@@ -53,15 +53,34 @@
     cursor: pointer;
     text-decoration: none;
   }
+  
+  
+  .close {
+    color: #aaa;
+    float:left;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 </style>
 </head>
 <body>
 <div class="main">
- <!--<video id="backgroundVideo" autoplay muted>
+
+<div id="movie_window" style=" width:100px;">
+<p style="z-index:100; position:absolute" id="backgroundclose" class="close" onclick="closeModal('movie_window')">&times; SKIP</p>
+ <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
     <source src="../../images/movie/WHOPEN.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>-->
-  <div class="content" id="contentDiv">
+    Your browser does not support the video tag. 
+  </video>
+  </div>
+  
+  <div class="content" id="contentDiv" style=" position:absolute">
     <div class="name_links">
       <div class="name_col">
         <div class="name">
@@ -224,13 +243,17 @@
 </div>
 </body>
 <script>
-/*  const videoElement = document.getElementById('backgroundVideo');
+  const videoElement = document.getElementById('backgroundVideo');
+const closeElement = document.getElementById('backgroundclose');
   const contentDiv = document.getElementById('contentDiv');
 
   videoElement.addEventListener('ended', function() {
       contentDiv.style.display = 'block';
       videoElement.style.display = 'none';
-  });*/
+	   closeElement.style.display = 'none';
+  });
+  
+
   const hoverDivs = document.querySelectorAll('.name_text');
     const imagesToDisplay = document.querySelectorAll('.name_img img');
 
@@ -243,5 +266,19 @@
             imagesToDisplay[index].style.display = 'none';
         });
     });
+	
+	
+	
+function closeModal(thisModal) {
+    document.getElementById(thisModal).style.display = 'none';
+}
+
+// If user clicks outside the modal, it will close
+window.onclick = function(event) {
+    var modal = document.getElementById('movie_window');
+    if (event.target == modal) {
+        closeModal('movie_window');
+    }
+}
 </script>
 </html>

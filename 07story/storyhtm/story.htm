@@ -16,15 +16,15 @@
     height: 600px;
     position: relative;
   }
-/*  .content {
-    display: none;
+  .content {
+    /*display: none;*/
     position: relative;
     z-index: 1;
     top: 50%;
     width: 800px;
     height: 600px;
     transform: translateY(-50%);
-  }*/
+  }
   .display-none {
     display: none;
   }
@@ -43,15 +43,31 @@
     position: absolute;
     /* display: none; */
   }
+  
+  .close {
+    color: #aaa;
+    float:left;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
 <div class="main">
-  <!--<video id="backgroundVideo" autoplay muted >
+<div id="movie_window" style=" width:100px;">
+<p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">&times; SKIP</p>
+ <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
     <source src="../../images/movie/STORYOPEN.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>-->
-  <div class="content" id="contentDiv">
+    Your browser does not support the video tag. 
+  </video>
+  </div>
+
+ <div class="content" id="contentDiv" style=" position:absolute">
     <div class="link_image_group">
       <a href="story1.htm" class="s_button" id="s1" style="top: 33px; left: 370px;"><img src="../../images/07story/STORY-1.gif" class="display-none" alt=""></a>
       <a href="story2.htm" class="s_button" id="s2" style="top: 99px; left: 440px;"><img src="../../images/07story/STORY-2.gif" class="display-none" alt=""></a>
@@ -71,13 +87,16 @@
 </div>
 </body>
 <script>
-  /*const videoElement = document.getElementById('backgroundVideo');
+   const videoElement = document.getElementById('backgroundVideo');
+const closeElement = document.getElementById('backgroundclose');
   const contentDiv = document.getElementById('contentDiv');
 
   videoElement.addEventListener('ended', function() {
       contentDiv.style.display = 'block';
       videoElement.style.display = 'none';
-  });*/
+	   closeElement.style.display = 'none';
+  });
+  
   const hoverDivs = document.querySelectorAll('.s_button');
   const imagesToDisplay = document.querySelectorAll('.s_button img');
 
@@ -90,5 +109,18 @@
           imagesToDisplay[index].style.display = 'none';
       });
   });
+  
+  function closeModal(thisModal) {
+    document.getElementById(thisModal).style.display = 'none';
+}
+
+// If user clicks outside the modal, it will close
+window.onclick = function(event) {
+    var modal = document.getElementById('movie_window');
+    if (event.target == modal) {
+        closeModal('movie_window');
+    }
+}
+
 </script>
 </html>

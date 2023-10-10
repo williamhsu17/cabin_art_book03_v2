@@ -1,127 +1,144 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>翰墨書院</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>翰墨書院</title>
 
-<script src="../../js/htmlinclude.js"></script>
-<include src="../../partial/header.html"></include>
-<style>
-  body {
-    background-image: url('../../images/back1.jpg');
-  }
-  .main {
-    background-image: url('../../images/05school/SCHOOL[6].jpg');
-    width: 800px;
-    height: 600px;
-    position: relative;
-  }
-  .content {
-    /*display: none;*/
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    width: 800px;
-    height: 600px;
-    transform: translateY(-50%);
-  }
-  .display-none {
-    display: none;
-  }
-  .link_image_group {
-    position: relative;
-  }
-  .link_image_group a {
-    position: absolute;
-  }
-  #font {
-    background-image: url('../../images/05school/SCHOOL[4].png');
-    width: 175px;
-    height: 156px;
-    top: 300px;
-    left: 480px;
-  }
-  #font:hover {background-image: url('../../images/05school/SCHOOL[3].png');}
-  #basic {
-    background-image: url('../../images/05school/SCHOOL[5].png');
-    width: 172px;
-    height: 146px;
-    top: 360px;
-    left: 240px;
-  }
-  #basic:hover {background-image: url('../../images/05school/SCHOOL[2].png');}
-  
-  .close {
-    color: #aaa;
-    float:left;
-    font-size: 30px;
-    font-weight: bold;
-}
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+  <script src="../../js/htmlinclude.js"></script>
+  <include src="../../partial/header.html"></include>
+  <style>
+    body {
+      background-image: url('../../images/back1.jpg');
+    }
 
-</style>
+    .main {
+      background-image: url('../../images/05school/SCHOOL[6].jpg');
+      width: 800px;
+      height: 600px;
+      position: relative;
+    }
+
+    .content {
+      /*display: none;*/
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      width: 800px;
+      height: 600px;
+      transform: translateY(-50%);
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .link_image_group {
+      position: relative;
+    }
+
+    .link_image_group a {
+      position: absolute;
+    }
+
+    #font {
+      background-image: url('../../images/05school/SCHOOL[4].png');
+      width: 175px;
+      height: 156px;
+      top: 300px;
+      left: 480px;
+    }
+
+    #font:hover {
+      background-image: url('../../images/05school/SCHOOL[3].png');
+    }
+
+    #basic {
+      background-image: url('../../images/05school/SCHOOL[5].png');
+      width: 172px;
+      height: 146px;
+      top: 360px;
+      left: 240px;
+    }
+
+    #basic:hover {
+      background-image: url('../../images/05school/SCHOOL[2].png');
+    }
+
+    .close {
+      color: #aaa;
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body>
-<div class="main">
-  <div id="movie_window" style=" width:100px;">
-<p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">&times; SKIP</p>
- <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
-    <source src="../../images/movie/SCHOOLOPEN
-.mp4" type="video/mp4">
-    Your browser does not support the video tag. 
-  </video>
-  </div>
 
- <div class="content" id="contentDiv" style=" position:absolute">
-    <div class="link_image_group">
-      <a href="font.htm" id="font" style="font-size: 0;">書體學習</a>
-      <a href="basic.htm" id="basic" style="font-size: 0;">基本常識</a>
+<body>
+  <div class="main">
+    <div id="movie_window" style=" width:100px;">
+      <p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">
+        &times; SKIP</p>
+      <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
+        <source src="../../images/movie/SCHOOLOPEN
+.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <include src="../../partial/nav.html"></include>
+
+    <div class="content" id="contentDiv" style=" position:absolute">
+      <div class="link_image_group">
+        <a href="font.htm" id="font" style="font-size: 0;">書體學習</a>
+        <a href="basic.htm" id="basic" style="font-size: 0;">基本常識</a>
+      </div>
+      <include src="../../partial/nav.html"></include>
+    </div>
   </div>
-</div>
 </body>
 <script>
   const videoElement = document.getElementById('backgroundVideo');
-const closeElement = document.getElementById('backgroundclose');
+  const closeElement = document.getElementById('backgroundclose');
   const contentDiv = document.getElementById('contentDiv');
 
-  videoElement.addEventListener('ended', function() {
-      contentDiv.style.display = 'block';
-      videoElement.style.display = 'none';
-	   closeElement.style.display = 'none';
+  videoElement.addEventListener('ended', function () {
+    contentDiv.style.display = 'block';
+    videoElement.style.display = 'none';
+    closeElement.style.display = 'none';
   });
-  
+
 
   const hoverDivs = document.querySelectorAll('.name_text');
-    const imagesToDisplay = document.querySelectorAll('.name_img img');
+  const imagesToDisplay = document.querySelectorAll('.name_img img');
 
-    hoverDivs.forEach((hoverDiv, index) => {
-        hoverDiv.addEventListener('mouseover', function() {
-            imagesToDisplay[index].style.display = 'block';
-        });
-
-        hoverDiv.addEventListener('mouseout', function() {
-            imagesToDisplay[index].style.display = 'none';
-        });
+  hoverDivs.forEach((hoverDiv, index) => {
+    hoverDiv.addEventListener('mouseover', function () {
+      imagesToDisplay[index].style.display = 'block';
     });
-	
-	
-	
-function closeModal(thisModal) {
-    document.getElementById(thisModal).style.display = 'none';
-}
 
-// If user clicks outside the modal, it will close
-window.onclick = function(event) {
+    hoverDiv.addEventListener('mouseout', function () {
+      imagesToDisplay[index].style.display = 'none';
+    });
+  });
+
+
+
+  function closeModal(thisModal) {
+    document.getElementById(thisModal).style.display = 'none';
+  }
+
+  // If user clicks outside the modal, it will close
+  window.onclick = function (event) {
     var modal = document.getElementById('movie_window');
     if (event.target == modal) {
-        closeModal('movie_window');
+      closeModal('movie_window');
     }
-}
+  }
 </script>
+
 </html>

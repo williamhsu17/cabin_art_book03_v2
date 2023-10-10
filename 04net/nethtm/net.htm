@@ -1,300 +1,328 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>網網相連</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>網網相連</title>
 
-<script src="../../js/htmlinclude.js"></script>
-<include src="../../partial/header.html"></include>
-<style>
-  body {
-    background-image: url('../../images/back1.jpg');
-  }
-  .main {
-    background-image: url('../netjpg/netbg.jpg');
-    width: 800px;
-    height: 600px;
-    position: relative;
-  }
-  .content {
-   /* display: none;*/
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    width: 800px;
-    height: 600px;
-    transform: translateY(-50%);
-  }
-  .display-none {
-    display: none;
-  }
-  .link_image_group {
-    position: relative;
-  }
-  .link_image_group a {
-    position: absolute;
-  }
-  #font {
-    background-image: url('../../images/05school/SCHOOL[4].png');
-    width: 175px;
-    height: 156px;
-    top: 300px;
-    left: 480px;
-  }
-  #font:hover {background-image: url('../../images/05school/SCHOOL[3].png');}
-  #basic {
-    background-image: url('../../images/05school/SCHOOL[5].png');
-    width: 172px;
-    height: 146px;
-    top: 360px;
-    left: 240px;
-  }
-  #basic:hover {background-image: url('../../images/05school/SCHOOL[2].png');}
-  
-  
-  .close {
-    color: #aaa;
-    float:left;
-    font-size: 30px;
-    font-weight: bold;
-}
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
+  <script src="../../js/htmlinclude.js"></script>
+  <include src="../../partial/header.html"></include>
+  <style>
+    body {
+      background-image: url('../../images/back1.jpg');
+    }
 
-  a:link {
-		text-decoration: none;
-	 }
-	 
-  a:hover {
-		text-decoration: underline;
-	 }
+    .main {
+      background-image: url('../netjpg/netbg.jpg');
+      width: 800px;
+      height: 600px;
+      position: relative;
+    }
 
-</style>
+    .content {
+      /* display: none;*/
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      width: 800px;
+      height: 600px;
+      transform: translateY(-50%);
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .link_image_group {
+      position: relative;
+    }
+
+    .link_image_group a {
+      position: absolute;
+    }
+
+    #font {
+      background-image: url('../../images/05school/SCHOOL[4].png');
+      width: 175px;
+      height: 156px;
+      top: 300px;
+      left: 480px;
+    }
+
+    #font:hover {
+      background-image: url('../../images/05school/SCHOOL[3].png');
+    }
+
+    #basic {
+      background-image: url('../../images/05school/SCHOOL[5].png');
+      width: 172px;
+      height: 146px;
+      top: 360px;
+      left: 240px;
+    }
+
+    #basic:hover {
+      background-image: url('../../images/05school/SCHOOL[2].png');
+    }
+
+
+    .close {
+      color: #aaa;
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body>
-<div class="main">
-<div id="movie_window" style=" width:100px;">
-<p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">&times; SKIP</p>
- <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
-    <source src="../../images/movie/NETOPEN.mp4" type="video/mp4">
-    Your browser does not support the video tag. 
-  </video>
-  </div>
 
- <div class="content" id="contentDiv" style=" position:absolute">
-    <table cellspacing="0" cellpadding="0" border="0">
-      <tr> 
-        <td width="47" height="4" valign="top"></td>
-        <td width="8" height="4" valign="top"></td>
-        <td width="1" height="4" valign="top"></td>
-        <td width="263" height="4" valign="top"></td>
-        <td width="65" height="4" valign="top"></td>
-        <td width="70" height="4" valign="top"></td>
-        <td width="194" height="4" valign="top"></td>
-        <td width="7" height="4" valign="top"></td>
-        <td width="55" height="4" valign="top"></td>
-        <td width="64" height="4" valign="top"></td>
-      </tr>
-      <tr>
-        <td height="72" valign="top"></td>
-        <td height="72" valign="top"></td>
-        <td height="72" colspan="6" valign="top"></td>
-        <td height="72" valign="top"></td>
-        <td height="72" valign="top"></td>
-      </tr>
-      <tr>
-        <td height="72" valign="top"></td>
-        <td height="72" valign="top"></td>
-        <td height="72" colspan="6" valign="top"></td>
-        <td height="72" valign="top"></td>
-        <td height="72" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="72" valign="top"></td>
-        <td width="8" height="72" valign="top"></td>
-        <td height="72" colspan="6" valign="top"><img src="../netjpg/infonew.png" alt="書法網站資訊" width="565" height="50"></td>
-        <td width="55" height="72" valign="top"><!--<embed src="../sound/net.wav" loop="true" autostart="true" width="4" height="4">
+<body>
+  <div class="main">
+    <div id="movie_window" style=" width:100px;">
+      <p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">
+        &times; SKIP</p>
+      <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
+        <source src="../../images/movie/NETOPEN.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="content" id="contentDiv" style=" position:absolute">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td width="47" height="4" valign="top"></td>
+          <td width="8" height="4" valign="top"></td>
+          <td width="1" height="4" valign="top"></td>
+          <td width="263" height="4" valign="top"></td>
+          <td width="65" height="4" valign="top"></td>
+          <td width="70" height="4" valign="top"></td>
+          <td width="194" height="4" valign="top"></td>
+          <td width="7" height="4" valign="top"></td>
+          <td width="55" height="4" valign="top"></td>
+          <td width="64" height="4" valign="top"></td>
+        </tr>
+        <tr>
+          <td height="72" valign="top"></td>
+          <td height="72" valign="top"></td>
+          <td height="72" colspan="6" valign="top"></td>
+          <td height="72" valign="top"></td>
+          <td height="72" valign="top"></td>
+        </tr>
+        <tr>
+          <td height="72" valign="top"></td>
+          <td height="72" valign="top"></td>
+          <td height="72" colspan="6" valign="top"></td>
+          <td height="72" valign="top"></td>
+          <td height="72" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="72" valign="top"></td>
+          <td width="8" height="72" valign="top"></td>
+          <td height="72" colspan="6" valign="top"><img src="../netjpg/infonew.png" alt="書法網站資訊" width="565"
+              height="50"></td>
+          <td width="55" height="72" valign="top"><!--<embed src="../sound/net.wav" loop="true" autostart="true" width="4" height="4">
           </embed>--></td>
-        <td width="64" height="72" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="28" valign="top"></td>
-        <td width="8" height="28" valign="top"></td>
-        <td width="1" height="28" valign="top"></td>
-        <td width="263" height="28" valign="top"><a href="https://www.bisouth.com.tw/" target="_blank" title="在新視窗打開連結">二南堂法帖 </a></td>
-        <td width="65" height="28" valign="top"></td>
-        <td height="28" colspan="2" valign="top"></td>
-        <td width="7" height="28" valign="top"></td>
-        <td width="55" height="28" valign="top"></td>
-        <td width="64" height="28" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="1" valign="top"></td>
-        <td width="8" height="1" valign="top"></td>
-        <td width="1" height="1" valign="top"></td>
-        <td width="263" height="28" rowspan="2" valign="top"><a href="https://fa.hfu.edu.tw/" target="_blank" title="在新視窗打開連結">華梵大學美術與文創學系</a></td>
-        <td width="65" height="1" valign="top"></td>
-        <td width="70" height="1" valign="top"></td>
-        <td width="194" height="1" valign="top"></td>
-        <td width="7" height="1" valign="top"></td>
-        <td width="55" height="1" valign="top"></td>
-        <td width="64" height="1" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="27" valign="top"></td>
-        <td width="8" height="27" valign="top"></td>
-        <td width="1" height="27" valign="top"></td>
-        <td width="65" height="27" valign="top"></td>
-        <td height="27" colspan="2" valign="top"><a href="https://arts.ntua.edu.tw/" target="_blank" title="在新視窗打開連結">國立臺灣藝術大學美術學系</a></td>
-        <td width="7" height="27" valign="top"></td>
-        <td width="55" height="27" valign="top"></td>
-        <td width="64" height="27" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="28" valign="top"></td>
-        <td width="8" height="28" valign="top"></td>
-        <td width="1" height="28" valign="top"></td>
-        <td width="263" height="28" valign="top"><a href="https://crmaar.pccu.edu.tw" target="_blank" title="在新視窗打開連結">中國文化大學美術學系</a></td>
-        <td width="65" height="28" valign="top"></td>
-        <td height="28" colspan="2" valign="top"><a href="https://www.art.ntnu.edu.tw/" target="_blank" title="在新視窗打開連結">國立臺灣師範大學美術學系</a></td>
-        <td width="7" height="28" valign="top"></td>
-        <td width="55" height="28" valign="top"></td>
-        <td width="64" height="28" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="3" valign="top"></td>
-        <td width="8" height="3" valign="top"></td>
-        <td width="1" height="3" valign="top"></td>
-        <td width="263" height="32" rowspan="2" valign="top"><a href="https://artwww.ncue.edu.tw/" target="_blank" title="在新視窗打開連結">國立彰化師範大學美術學系</a></td>
-        <td width="65" height="3" valign="top"></td>
-        <td width="70" height="3" valign="top"></td>
-        <td width="194" height="3" valign="top"></td>
-        <td width="7" height="3" valign="top"></td>
-        <td width="55" height="3" valign="top"></td>
-        <td width="64" height="3" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="29" valign="top"></td>
-        <td width="8" height="29" valign="top"></td>
-        <td width="1" height="29" valign="top"></td>
-        <td width="65" height="29" valign="top"></td>
-        <td height="29" colspan="2" valign="top"><a href="https://www.facebook.com/profile.php?id=100069307207615" target="_blank" title="在新視窗打開連結">國立臺灣師範大學書法社 </a></td>
-        <td width="7" height="29" valign="top"></td>
-        <td width="55" height="29" valign="top"></td>
-        <td width="64" height="29" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="2" valign="top"></td>
-        <td width="8" height="2" valign="top"></td>
-        <td width="1" height="2" valign="top"></td>
-        <td width="263" height="30" rowspan="2" valign="top"><a href="https://arts.nknu.edu.tw/"target="_blank" title="在新視窗打開連結">國立高雄師範大學美術學系</a></td>
-        <td width="65" height="2" valign="top"></td>
-        <td width="70" height="2" valign="top"></td>
-        <td width="194" height="2" valign="top"></td>
-        <td width="7" height="2" valign="top"></td>
-        <td width="55" height="2" valign="top"></td>
-        <td width="64" height="2" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="28" valign="top"></td>
-        <td width="8" height="28" valign="top"></td>
-        <td width="1" height="28" valign="top"></td>
-        <td width="65" height="28" valign="top"></td>
-        <td height="28" colspan="2" valign="top"><a href="https://fineart.thu.edu.tw/ " target="_blank" title="在新視窗打開連結">東海大學美術系</a></td>
-        <td width="7" height="28" valign="top"></td>
-        <td width="55" height="28" valign="top"></td>
-        <td width="64" height="28" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="2" valign="top"></td>
-        <td width="8" height="2" valign="top"></td>
-        <td width="1" height="2" valign="top"></td>
-        <td width="263" height="30" rowspan="2" valign="top"><a href="http://www.cavesart.com/" target="_blank" title="在新視窗打開連結">敦煌藝術中心</a></td>
-        <td width="65" height="2" valign="top"></td>
-        <td width="70" height="2" valign="top"></td>
-        <td width="194" height="2" valign="top"></td>
-        <td width="7" height="2" valign="top"></td>
-        <td width="55" height="2" valign="top"></td>
-        <td width="64" height="2" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="28" valign="top"></td>
-        <td width="8" height="28" valign="top"></td>
-        <td width="1" height="28" valign="top"></td>
-        <td width="65" height="28" valign="top"></td>
-        <td height="28" colspan="2" valign="top"><a href="https://www.facebook.com/kmsfund.org.tw/" target="_blank" title="在新視窗打開連結">郭木生文教基金會</a></td>
-        <td width="7" height="28" valign="top"></td>
-        <td width="55" height="28" valign="top"></td>
-        <td width="64" height="28" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="2" valign="top"></td>
-        <td width="8" height="2" valign="top"></td>
-        <td width="1" height="2" valign="top"></td>
-        <td width="263" height="28" rowspan="2" valign="top">&nbsp;</td>
-        <td width="65" height="2" valign="top"></td>
-        <td width="70" height="2" valign="top"></td>
-        <td width="194" height="2" valign="top"></td>
-        <td width="7" height="2" valign="top"></td>
-        <td width="55" height="2" valign="top"></td>
-        <td width="64" height="2" valign="top"></td>
-      </tr>
-      <tr> 
-        <td width="47" height="26" valign="top"></td>
-        <td width="8" height="26" valign="top"></td>
-        <td width="1" height="26" valign="top"></td>
-        <td width="65" height="26" valign="top"></td>
-        <td height="26" colspan="2" valign="top">&nbsp;</td>
-        <td width="7" height="26" valign="top"></td>
-        <td width="55" height="26" valign="top"></td>
-        <td width="64" height="26" valign="top"></td>
-      </tr>
-    </table>
-    <include src="../../partial/nav.html"></include>
+          <td width="64" height="72" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="28" valign="top"></td>
+          <td width="8" height="28" valign="top"></td>
+          <td width="1" height="28" valign="top"></td>
+          <td width="263" height="28" valign="top"><a href="https://www.bisouth.com.tw/" target="_blank"
+              title="在新視窗打開連結">二南堂法帖 </a></td>
+          <td width="65" height="28" valign="top"></td>
+          <td height="28" colspan="2" valign="top"></td>
+          <td width="7" height="28" valign="top"></td>
+          <td width="55" height="28" valign="top"></td>
+          <td width="64" height="28" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="1" valign="top"></td>
+          <td width="8" height="1" valign="top"></td>
+          <td width="1" height="1" valign="top"></td>
+          <td width="263" height="28" rowspan="2" valign="top"><a href="https://fa.hfu.edu.tw/" target="_blank"
+              title="在新視窗打開連結">華梵大學美術與文創學系</a></td>
+          <td width="65" height="1" valign="top"></td>
+          <td width="70" height="1" valign="top"></td>
+          <td width="194" height="1" valign="top"></td>
+          <td width="7" height="1" valign="top"></td>
+          <td width="55" height="1" valign="top"></td>
+          <td width="64" height="1" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="27" valign="top"></td>
+          <td width="8" height="27" valign="top"></td>
+          <td width="1" height="27" valign="top"></td>
+          <td width="65" height="27" valign="top"></td>
+          <td height="27" colspan="2" valign="top"><a href="https://arts.ntua.edu.tw/" target="_blank"
+              title="在新視窗打開連結">國立臺灣藝術大學美術學系</a></td>
+          <td width="7" height="27" valign="top"></td>
+          <td width="55" height="27" valign="top"></td>
+          <td width="64" height="27" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="28" valign="top"></td>
+          <td width="8" height="28" valign="top"></td>
+          <td width="1" height="28" valign="top"></td>
+          <td width="263" height="28" valign="top"><a href="https://crmaar.pccu.edu.tw" target="_blank"
+              title="在新視窗打開連結">中國文化大學美術學系</a></td>
+          <td width="65" height="28" valign="top"></td>
+          <td height="28" colspan="2" valign="top"><a href="https://www.art.ntnu.edu.tw/" target="_blank"
+              title="在新視窗打開連結">國立臺灣師範大學美術學系</a></td>
+          <td width="7" height="28" valign="top"></td>
+          <td width="55" height="28" valign="top"></td>
+          <td width="64" height="28" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="3" valign="top"></td>
+          <td width="8" height="3" valign="top"></td>
+          <td width="1" height="3" valign="top"></td>
+          <td width="263" height="32" rowspan="2" valign="top"><a href="https://artwww.ncue.edu.tw/" target="_blank"
+              title="在新視窗打開連結">國立彰化師範大學美術學系</a></td>
+          <td width="65" height="3" valign="top"></td>
+          <td width="70" height="3" valign="top"></td>
+          <td width="194" height="3" valign="top"></td>
+          <td width="7" height="3" valign="top"></td>
+          <td width="55" height="3" valign="top"></td>
+          <td width="64" height="3" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="29" valign="top"></td>
+          <td width="8" height="29" valign="top"></td>
+          <td width="1" height="29" valign="top"></td>
+          <td width="65" height="29" valign="top"></td>
+          <td height="29" colspan="2" valign="top"><a href="https://www.facebook.com/profile.php?id=100069307207615"
+              target="_blank" title="在新視窗打開連結">國立臺灣師範大學書法社 </a></td>
+          <td width="7" height="29" valign="top"></td>
+          <td width="55" height="29" valign="top"></td>
+          <td width="64" height="29" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="2" valign="top"></td>
+          <td width="8" height="2" valign="top"></td>
+          <td width="1" height="2" valign="top"></td>
+          <td width="263" height="30" rowspan="2" valign="top"><a href="https://arts.nknu.edu.tw/" target="_blank"
+              title="在新視窗打開連結">國立高雄師範大學美術學系</a></td>
+          <td width="65" height="2" valign="top"></td>
+          <td width="70" height="2" valign="top"></td>
+          <td width="194" height="2" valign="top"></td>
+          <td width="7" height="2" valign="top"></td>
+          <td width="55" height="2" valign="top"></td>
+          <td width="64" height="2" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="28" valign="top"></td>
+          <td width="8" height="28" valign="top"></td>
+          <td width="1" height="28" valign="top"></td>
+          <td width="65" height="28" valign="top"></td>
+          <td height="28" colspan="2" valign="top"><a href="https://fineart.thu.edu.tw/ " target="_blank"
+              title="在新視窗打開連結">東海大學美術系</a></td>
+          <td width="7" height="28" valign="top"></td>
+          <td width="55" height="28" valign="top"></td>
+          <td width="64" height="28" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="2" valign="top"></td>
+          <td width="8" height="2" valign="top"></td>
+          <td width="1" height="2" valign="top"></td>
+          <td width="263" height="30" rowspan="2" valign="top"><a href="http://www.cavesart.com/" target="_blank"
+              title="在新視窗打開連結">敦煌藝術中心</a></td>
+          <td width="65" height="2" valign="top"></td>
+          <td width="70" height="2" valign="top"></td>
+          <td width="194" height="2" valign="top"></td>
+          <td width="7" height="2" valign="top"></td>
+          <td width="55" height="2" valign="top"></td>
+          <td width="64" height="2" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="28" valign="top"></td>
+          <td width="8" height="28" valign="top"></td>
+          <td width="1" height="28" valign="top"></td>
+          <td width="65" height="28" valign="top"></td>
+          <td height="28" colspan="2" valign="top"><a href="https://www.facebook.com/kmsfund.org.tw/" target="_blank"
+              title="在新視窗打開連結">郭木生文教基金會</a></td>
+          <td width="7" height="28" valign="top"></td>
+          <td width="55" height="28" valign="top"></td>
+          <td width="64" height="28" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="2" valign="top"></td>
+          <td width="8" height="2" valign="top"></td>
+          <td width="1" height="2" valign="top"></td>
+          <td width="263" height="28" rowspan="2" valign="top">&nbsp;</td>
+          <td width="65" height="2" valign="top"></td>
+          <td width="70" height="2" valign="top"></td>
+          <td width="194" height="2" valign="top"></td>
+          <td width="7" height="2" valign="top"></td>
+          <td width="55" height="2" valign="top"></td>
+          <td width="64" height="2" valign="top"></td>
+        </tr>
+        <tr>
+          <td width="47" height="26" valign="top"></td>
+          <td width="8" height="26" valign="top"></td>
+          <td width="1" height="26" valign="top"></td>
+          <td width="65" height="26" valign="top"></td>
+          <td height="26" colspan="2" valign="top">&nbsp;</td>
+          <td width="7" height="26" valign="top"></td>
+          <td width="55" height="26" valign="top"></td>
+          <td width="64" height="26" valign="top"></td>
+        </tr>
+      </table>
+      <include src="../../partial/nav.html"></include>
+    </div>
   </div>
-</div>
 </body>
 <script>
   const videoElement = document.getElementById('backgroundVideo');
-const closeElement = document.getElementById('backgroundclose');
+  const closeElement = document.getElementById('backgroundclose');
   const contentDiv = document.getElementById('contentDiv');
 
-  videoElement.addEventListener('ended', function() {
-      contentDiv.style.display = 'block';
-      videoElement.style.display = 'none';
-	   closeElement.style.display = 'none';
+  videoElement.addEventListener('ended', function () {
+    contentDiv.style.display = 'block';
+    videoElement.style.display = 'none';
+    closeElement.style.display = 'none';
   });
-  
+
 
   const hoverDivs = document.querySelectorAll('.name_text');
-    const imagesToDisplay = document.querySelectorAll('.name_img img');
+  const imagesToDisplay = document.querySelectorAll('.name_img img');
 
-    hoverDivs.forEach((hoverDiv, index) => {
-        hoverDiv.addEventListener('mouseover', function() {
-            imagesToDisplay[index].style.display = 'block';
-        });
-
-        hoverDiv.addEventListener('mouseout', function() {
-            imagesToDisplay[index].style.display = 'none';
-        });
+  hoverDivs.forEach((hoverDiv, index) => {
+    hoverDiv.addEventListener('mouseover', function () {
+      imagesToDisplay[index].style.display = 'block';
     });
-	
-	
-	
-function closeModal(thisModal) {
-    document.getElementById(thisModal).style.display = 'none';
-}
 
-// If user clicks outside the modal, it will close
-window.onclick = function(event) {
+    hoverDiv.addEventListener('mouseout', function () {
+      imagesToDisplay[index].style.display = 'none';
+    });
+  });
+
+
+
+  function closeModal(thisModal) {
+    document.getElementById(thisModal).style.display = 'none';
+  }
+
+  // If user clicks outside the modal, it will close
+  window.onclick = function (event) {
     var modal = document.getElementById('movie_window');
     if (event.target == modal) {
-        closeModal('movie_window');
+      closeModal('movie_window');
     }
-}
+  }
 </script>
 
 </html>

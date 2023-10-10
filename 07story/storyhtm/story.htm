@@ -1,126 +1,148 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>書法故事</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>書法故事</title>
 
-<script src="../../js/htmlinclude.js"></script>
-<include src="../../partial/header.html"></include>
-<style>
-  body {
-    background-image: url('../../images/back1.jpg');
-  }
-  .main {
-    background-image: url('../../images/07story/STORY+.jpg');
-    width: 800px;
-    height: 600px;
-    position: relative;
-  }
-  .content {
-    /*display: none;*/
-    position: relative;
-    z-index: 1;
-    top: 50%;
-    width: 800px;
-    height: 600px;
-    transform: translateY(-50%);
-  }
-  .display-none {
-    display: none;
-  }
-  .link_image_group {
-    position: relative;
-  }
-  .link_image_group a {
-    position: absolute;
-  }
-  .s_button {
-    width: 55px;
-    height: 55px;
-    position: relative;
-  }
-  .s_button img {
-    position: absolute;
-    /* display: none; */
-  }
-  
-  .close {
-    color: #aaa;
-    float:left;
-    font-size: 30px;
-    font-weight: bold;
-}
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-</style>
+  <script src="../../js/htmlinclude.js"></script>
+  <include src="../../partial/header.html"></include>
+  <style>
+    body {
+      background-image: url('../../images/back1.jpg');
+    }
+
+    .main {
+      background-image: url('../../images/07story/STORY+.jpg');
+      width: 800px;
+      height: 600px;
+      position: relative;
+    }
+
+    .content {
+      /*display: none;*/
+      position: relative;
+      z-index: 1;
+      top: 50%;
+      width: 800px;
+      height: 600px;
+      transform: translateY(-50%);
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .link_image_group {
+      position: relative;
+    }
+
+    .link_image_group a {
+      position: absolute;
+    }
+
+    .s_button {
+      width: 55px;
+      height: 55px;
+      position: relative;
+    }
+
+    .s_button img {
+      position: absolute;
+      /* display: none; */
+    }
+
+    .close {
+      color: #aaa;
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-<div class="main">
-<div id="movie_window" style=" width:100px;">
-<p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">&times; SKIP</p>
- <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
-    <source src="../../images/movie/STORYOPEN.mp4" type="video/mp4">
-    Your browser does not support the video tag. 
-  </video>
-  </div>
-
- <div class="content" id="contentDiv" style=" position:absolute">
-    <div class="link_image_group">
-      <a href="story1.htm" class="s_button" id="s1" style="top: 33px; left: 370px;"><img src="../../images/07story/STORY-1.gif" class="display-none" alt="羲之愛鵝"></a>
-      <a href="story2.htm" class="s_button" id="s2" style="top: 99px; left: 440px;"><img src="../../images/07story/STORY-2.gif" class="display-none" alt="侍郎行者"></a>
-      <a href="story3.htm" class="s_button" id="s3" style="top: 196px; left: 465px;"><img src="../../images/07story/STORY-3.gif" class="display-none" alt="落水蘭亭"></a>
-      <a href="story4.htm" class="s_button" id="s4" style="top: 290px; left: 426px;"><img src="../../images/07story/STORY-4.gif" class="display-none" alt="筆塚"></a>
-      <a href="story5.htm" class="s_button" id="s5" style="top: 350px; left: 330px;"><img src="../../images/07story/STORY-5.gif" class="display-none" alt="鐵門限"></a>
-      <a href="story6.htm" class="s_button" id="s6" style="top: 330px; left: 240px;"><img src="../../images/07story/STORY-6.gif" class="display-none" alt="好聯不打折"></a>
-      <a href="story7.htm" class="s_button" id="s7" style="top: 268px; left: 170px;"><img src="../../images/07story/STORY-7.gif" class="display-none" alt="柳書之貴"></a>
-      <a href="story8.htm" class="s_button" id="s8" style="top: 168px; left: 144px;"><img src="../../images/07story/STORY-8.gif" class="display-none" alt="山中宰相"></a>
-      <a href="story9.htm" class="s_button" id="s9" style="top: 82px; left: 180px;"><img src="../../images/07story/STORY-9.gif" class="display-none" alt="張顛狂草"></a>
-      <a href="story10.htm" class="s_button" id="s10" style="top: 28px; left: 266px;"><img src="../../images/07story/STORY-10.gif" class="display-none" alt="乞米帖"></a>
-      
+  <div class="main">
+    <div id="movie_window" style=" width:100px;">
+      <p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">
+        &times; SKIP</p>
+      <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
+        <source src="../../images/movie/STORYOPEN.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <include src="../../partial/nav.html"></include>
-  </div>
 
-</div>
+    <div class="content" id="contentDiv" style=" position:absolute">
+      <div class="link_image_group">
+        <a href="story1.htm" class="s_button" id="s1" style="top: 33px; left: 370px;"><img
+            src="../../images/07story/STORY-1.gif" class="display-none" alt="羲之愛鵝"></a>
+        <a href="story2.htm" class="s_button" id="s2" style="top: 99px; left: 440px;"><img
+            src="../../images/07story/STORY-2.gif" class="display-none" alt="侍郎行者"></a>
+        <a href="story3.htm" class="s_button" id="s3" style="top: 196px; left: 465px;"><img
+            src="../../images/07story/STORY-3.gif" class="display-none" alt="落水蘭亭"></a>
+        <a href="story4.htm" class="s_button" id="s4" style="top: 290px; left: 426px;"><img
+            src="../../images/07story/STORY-4.gif" class="display-none" alt="筆塚"></a>
+        <a href="story5.htm" class="s_button" id="s5" style="top: 350px; left: 330px;"><img
+            src="../../images/07story/STORY-5.gif" class="display-none" alt="鐵門限"></a>
+        <a href="story6.htm" class="s_button" id="s6" style="top: 330px; left: 240px;"><img
+            src="../../images/07story/STORY-6.gif" class="display-none" alt="好聯不打折"></a>
+        <a href="story7.htm" class="s_button" id="s7" style="top: 268px; left: 170px;"><img
+            src="../../images/07story/STORY-7.gif" class="display-none" alt="柳書之貴"></a>
+        <a href="story8.htm" class="s_button" id="s8" style="top: 168px; left: 144px;"><img
+            src="../../images/07story/STORY-8.gif" class="display-none" alt="山中宰相"></a>
+        <a href="story9.htm" class="s_button" id="s9" style="top: 82px; left: 180px;"><img
+            src="../../images/07story/STORY-9.gif" class="display-none" alt="張顛狂草"></a>
+        <a href="story10.htm" class="s_button" id="s10" style="top: 28px; left: 266px;"><img
+            src="../../images/07story/STORY-10.gif" class="display-none" alt="乞米帖"></a>
+
+      </div>
+      <include src="../../partial/nav.html"></include>
+    </div>
+
+  </div>
 </body>
 <script>
-   const videoElement = document.getElementById('backgroundVideo');
-const closeElement = document.getElementById('backgroundclose');
+  const videoElement = document.getElementById('backgroundVideo');
+  const closeElement = document.getElementById('backgroundclose');
   const contentDiv = document.getElementById('contentDiv');
 
-  videoElement.addEventListener('ended', function() {
-      contentDiv.style.display = 'block';
-      videoElement.style.display = 'none';
-	   closeElement.style.display = 'none';
+  videoElement.addEventListener('ended', function () {
+    contentDiv.style.display = 'block';
+    videoElement.style.display = 'none';
+    closeElement.style.display = 'none';
   });
-  
+
   const hoverDivs = document.querySelectorAll('.s_button');
   const imagesToDisplay = document.querySelectorAll('.s_button img');
 
   hoverDivs.forEach((hoverDiv, index) => {
-      hoverDiv.addEventListener('mouseover', function() {
-          imagesToDisplay[index].style.display = 'block';
-      });
+    hoverDiv.addEventListener('mouseover', function () {
+      imagesToDisplay[index].style.display = 'block';
+    });
 
-      hoverDiv.addEventListener('mouseout', function() {
-          imagesToDisplay[index].style.display = 'none';
-      });
+    hoverDiv.addEventListener('mouseout', function () {
+      imagesToDisplay[index].style.display = 'none';
+    });
   });
-  
+
   function closeModal(thisModal) {
     document.getElementById(thisModal).style.display = 'none';
-}
+  }
 
-// If user clicks outside the modal, it will close
-window.onclick = function(event) {
+  // If user clicks outside the modal, it will close
+  window.onclick = function (event) {
     var modal = document.getElementById('movie_window');
     if (event.target == modal) {
-        closeModal('movie_window');
+      closeModal('movie_window');
     }
-}
+  }
 
 </script>
+
 </html>

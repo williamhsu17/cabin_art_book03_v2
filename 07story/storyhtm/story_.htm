@@ -69,14 +69,14 @@
 
 <body>
   <div class="main">
-    <!--<div id="movie_window" style=" width:100px;">
+    <div id="movie_window" style=" width:100px;">
       <p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">
         &times; SKIP</p>
       <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
         <source src="../../images/movie/STORYOPEN.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-    </div>-->
+    </div>
 <h1 style="font-size:0px;">書法的奧秘</h1>
 
     <div class="content" id="contentDiv" style=" position:absolute">
@@ -111,13 +111,13 @@
 <script>
   const videoElement = document.getElementById('backgroundVideo');
   const closeElement = document.getElementById('backgroundclose');
- /* const contentDiv = document.getElementById('contentDiv');
+  const contentDiv = document.getElementById('contentDiv');
 
   videoElement.addEventListener('ended', function () {
     contentDiv.style.display = 'block';
     videoElement.style.display = 'none';
     closeElement.style.display = 'none';
-  });*/
+  });
 
   const hoverDivs = document.querySelectorAll('.s_button');
   const imagesToDisplay = document.querySelectorAll('.s_button img');

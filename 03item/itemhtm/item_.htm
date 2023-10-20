@@ -2,7 +2,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>翰墨書院</title>
+  <title>文房聚英</title>
 
   <script src="../../js/htmlinclude.js"></script>
   <include src="../../partial/header.html"></include>
@@ -12,14 +12,14 @@
     }
 
     .main {
-      background-image: url('../../images/05school/SCHOOL[6].jpg');
+      background-image: url('../../images/03item/BACK.jpg');
       width: 800px;
       height: 600px;
       position: relative;
     }
 
     .content {
-      /*display: none;*/
+      /* display: none;*/
       position: relative;
       z-index: 1;
       top: 50%;
@@ -40,28 +40,44 @@
       position: absolute;
     }
 
-    #font {
-      background-image: url('../../images/05school/SCHOOL[4].png');
-      width: 175px;
-      height: 156px;
-      top: 300px;
-      left: 480px;
+    #other {
+      background-image: url('../../images/03item/OTHER.jpg');
+      width: 116px;
+      height: 198px;
+      top: 200px;
+      left: 30px;
     }
 
-    #font:hover {
-      background-image: url('../../images/05school/SCHOOL[3].png');
+    #paper {
+      background-image: url('../../images/03item/PAPER.jpg');
+      width: 122px;
+      height: 124px;
+      top: 120px;
+      left: 270px;
     }
 
-    #basic {
-      background-image: url('../../images/05school/SCHOOL[5].png');
-      width: 172px;
+    #dish {
+      background-image: url('../../images/03item/DISH.jpg');
+      width: 146px;
       height: 146px;
-      top: 360px;
-      left: 240px;
+      top: 340px;
+      left: 200px;
     }
 
-    #basic:hover {
-      background-image: url('../../images/05school/SCHOOL[2].png');
+    #ink {
+      background-image: url('../../images/03item/INK.jpg');
+      width: 48px;
+      height: 218px;
+      top: 240px;
+      left: 440px;
+    }
+
+    #pen {
+      background-image: url('../../images/03item/PEN.jpg');
+      width: 48px;
+      height: 278px;
+      top: 70px;
+      left: 560px;
     }
 
     .close {
@@ -82,21 +98,23 @@
 
 <body>
   <div class="main">
-    <!--<div id="movie_window" style=" width:100px;">
+    <div id="movie_window" style=" width:100px;">
       <p style="z-index:100; position:absolute" id="backgroundclose" class="close" onClick="closeModal('movie_window')">
         &times; SKIP</p>
       <video style="z-index:50; position:relative" id="backgroundVideo" autoplay muted>
-        <source src="../../images/movie/SCHOOLOPEN
-.mp4" type="video/mp4">
+        <source src="../../images/movie/ITEMOPEN.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-    </div>-->
-  <h1 style="font-size:0px;">書法的奧秘</h1>
+    </div>
+    <h1 style="font-size:0px;">書法的奧秘</h1>
 
     <div class="content" id="contentDiv" style=" position:absolute">
       <div class="link_image_group">
-        <a href="font.htm" id="font" style="font-size: 0;">書體學習</a>
-        <a href="basic.htm" id="basic" style="font-size: 0;">基本常識</a>
+        <a href="other.htm" id="other" style="font-size: 0;">其他</a>
+        <a href="paper.htm" id="paper" style="font-size: 0;">紙</a>
+        <a href="dish.htm" id="dish" style="font-size: 0;">硯</a>
+        <a href="ink.htm" id="ink" style="font-size: 0;">墨</a>
+        <a href="pen.htm" id="pen" style="font-size: 0;">筆</a>
       </div>
       <include src="../../partial/nav.html"></include>
     </div>
@@ -105,13 +123,13 @@
 <script>
   const videoElement = document.getElementById('backgroundVideo');
   const closeElement = document.getElementById('backgroundclose');
- /* const contentDiv = document.getElementById('contentDiv');
+  const contentDiv = document.getElementById('contentDiv');
 
   videoElement.addEventListener('ended', function () {
     contentDiv.style.display = 'block';
     videoElement.style.display = 'none';
     closeElement.style.display = 'none';
-  });*/
+  });
 
 
   const hoverDivs = document.querySelectorAll('.name_text');

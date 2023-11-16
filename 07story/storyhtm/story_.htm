@@ -132,7 +132,15 @@
       imagesToDisplay[index].style.display = 'block';
     });
 
+    hoverDiv.addEventListener('focus', function () {
+      imagesToDisplay[index].style.display = 'block';
+    });
+
     hoverDiv.addEventListener('mouseout', function () {
+      imagesToDisplay[index].style.display = 'none';
+    });
+
+    hoverDiv.addEventListener('focusout', function () {
       imagesToDisplay[index].style.display = 'none';
     });
   });
